@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import MainPage from "./components/mainPage";
+import "./App.css";
+import Header from "./components/header";
+import { useState } from "react";
+import HoneyPage from "./components/honeyPage";
 
 function App() {
+  const [actualPage, setActualPage] = useState('main')
+
+  const handlePageSelected = () => {
+    if(actualPage === 'main'){
+      return <MainPage />
+    }
+    if(actualPage === 'honey'){
+      return <HoneyPage />
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header setActualPage={setActualPage}>
+        {handlePageSelected()}
+      </Header>
     </div>
   );
 }

@@ -1,0 +1,108 @@
+.containerMain {
+  width: 100%;
+  height: 200vh;
+}
+
+.firstParallax {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.firstParallax .bgTransparent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.firstBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+}
+
+.firstBox h1 {
+  color: white;
+  font-size: 3.5em;
+}
+
+
+
+.secondBox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  gap: 16px;
+}
+
+.secondBox h3 {
+  color: white;
+  font-size: 1.3em;
+  text-align: center;
+  width: 700px;
+  max-width: 90%;
+}
+
+.paralaxText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  gap: 16px;
+  z-index: 10;
+  height: 500px;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+}
+
+.secondParallax {
+  width: 100vw;
+  height: 100vh;
+}
+
+.firstImageBox {
+  width: 100%;
+  height: 100%;
+}
+
+.firstImageBox img {
+  width: 100%;
+  height: 100%;
+}
+
+.bgTransparentChurch {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.4;
+}
+
+@media (max-width: 600px) {
+    .firstBox h1 {
+      color: white;
+      font-size: 2.5em;
+    }
+
+    .firstImageBox img {
+        width: 100%;
+        height: 100%;
+        object-fit:none;
+      }
+  }
